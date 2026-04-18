@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Font Awesome 6.5.1+ (6.5.0 had a bug: fa-file-pdf showed “PNG”) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 <body>
@@ -309,8 +309,12 @@
                 <i class="fa-solid fa-envelope"></i>
             </a>
             <div class="dock-divider"></div>
-            <a href="/files/waa_resume.pdf" class="dock-item" data-tooltip="View Resume" id="dock-resume" target="_blank" rel="noopener noreferrer" download="waa_resume.pdf">
-                <i class="fa-solid fa-file-pdf"></i>
+            <a href="/files/waa_resume.pdf" class="dock-item dock-item--pdf" id="dock-resume" data-tooltip="Resume (PDF)" target="_blank" rel="noopener noreferrer" download="waa_resume.pdf" aria-label="Open resume PDF">
+                <!-- Inline SVG (not FA font): Font Awesome 6.5.0 wrongly drew “PNG” on fa-file-pdf -->
+                <svg class="dock-item__icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <rect x="4" y="2" width="16" height="20" rx="2.25" fill="currentColor"/>
+                    <text x="12" y="17.4" text-anchor="middle" font-size="5.25" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="700" fill="rgba(255,255,255,0.95)">PDF</text>
+                </svg>
             </a>
         </div>
     </div>
