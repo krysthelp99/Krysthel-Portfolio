@@ -824,11 +824,9 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 
 /* ── 12. Artworks (Bento) ─────────────────────────────────── */
 .artworks {
-  padding: 0 0 var(--sp-2xl); 
-  border-top: none; 
-  background:
-    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(191, 90, 242, 0.07) 0%, transparent 55%),
-    var(--c-bg-2);
+  padding: 0 0 var(--sp-2xl);
+  border-top: none;
+  background: var(--c-bg);
 }
 
 .artworks__lede {
