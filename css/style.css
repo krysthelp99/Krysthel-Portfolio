@@ -822,17 +822,18 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   flex-wrap: wrap;
 }
 
-/* ── 12. Artworks (Bento) ─────────────────────────────────── */
 /* ── 12. Projects Bento ───────────────────────────────────── */
-.projects-section {
-  padding: var(--sp-xl) 0 var(--sp-2xl);
-  background: var(--c-bg);
+.projects-container {
+  max-width: 1200px; /* Limits the width so it doesn't stretch to the edges */
+  margin: 0 auto;    /* Centers the grid on the screen */
+  padding: 0 40px;   /* Adds the space you want on the left and right */
 }
 
+/* Optional: Adjust the gap between tiles if they still feel too large */
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 16px;
+  gap: 20px;         /* Increased gap for a more "organic" feel */
   margin-top: 3rem;
 }
 
