@@ -822,7 +822,6 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   flex-wrap: wrap;
 }
 
-/* ── 12. Projects (Modern 4-Grid) ────────────────────────── */
 /* ── 12. Projects (Uniform 4-Grid) ────────────────────────── */
 .projects-section {
   padding: var(--sp-xl) 0 var(--sp-2xl);
@@ -830,7 +829,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 .projects-container {
-  max-width: 1200px;
+  max-width: 1160px;
   margin-inline: auto;
   padding-inline: var(--sp-md);
 }
