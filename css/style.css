@@ -823,146 +823,58 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 /* ── 12. Projects (Modern 4-Grid) ────────────────────────── */
+/* ── 12. Projects (Uniform 4-Grid) ────────────────────────── */
 .projects-section {
   padding: var(--sp-xl) 0 var(--sp-2xl);
   background: var(--c-bg);
 }
 
 .projects-container {
-  max-width: 1200px; /* Perfect for 4 wide boxes */
+  max-width: 1200px;
   margin-inline: auto;
-  padding-inline: var(--sp-md); /* Recommended 2rem/32px spacing */
+  padding-inline: var(--sp-md);
 }
 
-/* The Core 4-Column Layout */
+/* This is the part that creates the 4 boxes side-by-side */
 .project-four-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Four equal sized columns */
-  gap: 1.5rem; /* Clean 'Apple-style' gap */
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 1.5rem;
   margin-top: 3.5rem;
 }
 
-/* Individual Box Styling */
 .proj-box {
   background: var(--c-surface);
   border: 1px solid var(--c-border);
-  border-radius: var(--radius-xl); /* Matches your 'modern organic' style */
+  border-radius: var(--radius-xl);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.4s var(--ease-out), border-color 0.3s, box-shadow 0.4s;
+  height: 100%; /* Ensures all boxes are the same height */
+  transition: transform 0.4s var(--ease-out);
 }
 
-.proj-box:hover {
-  transform: translateY(-8px);
-  border-color: var(--c-accent);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.5); /* Deep 'Industrial' shadow */
-}
-
-/* Image Area - Perfect Square Mockups */
 .proj-img-area {
-  aspect-ratio: 1 / 1; /* Ensures all mockups are perfect squares */
-  background: #080808; /* Darker core for contrast */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  aspect-ratio: 1 / 1;
+  background: #0a0a0a;
   border-bottom: 1px solid var(--c-border);
-  padding: 1.5rem;
+  width: 100%;
 }
 
-/* Body Content Styling */
 .proj-body {
-  padding: 2rem 1.5rem 1.5rem;
-  flex: 1;
+  padding: 1.5rem;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-/* Metadata Row */
-.proj-meta {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 1rem;
+/* Responsive: 2 columns on tablets, 1 on phones */
+@media (max-width: 1100px) {
+  .project-four-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-.p-index {
-  font-family: var(--ff-mono);
-  font-size: 0.85rem;
-  color: var(--c-text-3); /* Muted numbering */
-}
-
-/* Tag colors matching your brand system */
-.p-tag {
-  font-family: var(--ff-sans);
-  font-size: 0.7rem;
-  font-weight: var(--fw-semibold);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding: 0.3rem 0.8rem;
-  border-radius: 980px; /* Full 'Pill' shape */
-}
-
-.p-tag-primary { color: var(--c-accent); background: rgba(41, 151, 255, 0.1); }
-.p-tag-secondary { color: #8a3ffc; background: rgba(138, 63, 252, 0.1); }
-.p-tag-accent { color: #24a148; background: rgba(36, 161, 72, 0.1); }
-.p-tag-muted { color: var(--c-text-2); background: rgba(255, 255, 255, 0.05); }
-
-/* Typography */
-.proj-title {
-  font-family: var(--ff-sans);
-  font-size: 1.35rem;
-  font-weight: var(--fw-bold);
-  color: var(--c-text);
-  margin-bottom: 0.75rem;
-  letter-spacing: -0.01em;
-}
-
-.proj-desc {
-  font-family: var(--ff-sans);
-  font-size: 0.9rem;
-  color: var(--c-text-2);
-  line-height: 1.6;
-  margin-bottom: 2rem;
-}
-
-/* Links / CTAs */
-.proj-links {
-  margin-top: auto; /* Pushes links to the bottom */
-}
-
-.p-btn {
-  font-family: var(--ff-sans);
-  font-size: 0.85rem;
-  font-weight: var(--fw-semibold);
-  color: var(--c-accent);
-  transition: color 0.2s;
-}
-
-.p-btn:hover {
-  color: #82cfff; /* Lighter blue on hover */
-}
-
-/* ────────────────────────────────────────────────────────── */
-/* 📱 Responsive Adjustments */
-
-/* Tablet & Smaller Laptops (1024px) */
-@media (max-width: 1024px) {
-  .projects-container { padding-inline: 1.5rem; }
-  .project-four-grid {
-    grid-template-columns: repeat(2, 1fr); /* Switches to 2x2 grid */
-    gap: 1rem;
-  }
-}
-
-/* Mobile Devices (600px) */
-@media (max-width: 600px) {
-  .project-four-grid {
-    grid-template-columns: 1fr; /* Switches to single column vertical list */
-  }
-  .proj-img-area {
-    aspect-ratio: 16 / 9; /* More appropriate aspect ratio for vertical list */
-  }
+@media (max-width: 650px) {
+  .project-four-grid { grid-template-columns: 1fr; }
 }
 
 /* ── 13. Footer ───────────────────────────────────────────── */
