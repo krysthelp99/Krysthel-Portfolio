@@ -837,9 +837,9 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   background: var(--c-surface);
   border: 1px solid var(--c-border);
   border-radius: var(--radius-xl);
-  aspect-ratio: 16 / 9; /* Keeps them as small squares */
+  aspect-ratio: 3 / 2; /* Keeps them as small squares */
   overflow: hidden;    /* CRITICAL: This hides the blue box until hover */
-  transition: transform 0.8s var(--ease-out);
+  transition: transform 0.2s var(--ease-out);
 }
 
 /* --- 3. The Overlay (The Blue Slide) --- */
