@@ -823,17 +823,23 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 /* ── 12. Projects Bento ───────────────────────────────────── */
-.projects-container {
-  max-width: 1100px; /* Limits the width so it doesn't stretch to the edges */
-  margin: 0 auto;    /* Centers the grid on the screen */
-  padding: 0 40px;   /* Adds the space you want on the left and right */
+.projects-section {
+  padding: var(--sp-xl) 0 var(--sp-2xl);
+  background: var(--c-bg);
 }
 
-/* Optional: Adjust the gap between tiles if they still feel too large */
+.projects-container {
+  /* Aligns with your existing site's width and adds side spacing */
+  max-width: 1160px; 
+  margin-inline: auto;
+  padding-inline: var(--sp-md); /* This is 2rem/32px in your current variables */
+}
+
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 25px;         /* Increased gap for a more "organic" feel */
+  /* The "sweet spot" gap for Apple-style grids */
+  gap: 1.5rem; 
   margin-top: 3rem;
 }
 
