@@ -323,38 +323,113 @@
     </section>
 
     <!-- ===================== ARTWORKS (BENTO) ===================== -->
-    <section class="artworks" id="artworks" aria-labelledby="artworks-heading">
-        <div class="container">
-            <p class="eyebrow reveal-fade">Showcase</p>
-            <h2 class="section-headline reveal-slide-up" id="artworks-heading">My artworks.</h2>
-            <p class="artworks__lede reveal-fade" style="--delay:.08s">
-                Drop your pieces into <code class="artworks__code">public/art/</code> — keep the filenames or update the <code class="artworks__code">src</code> paths below. Images use <strong>cover</strong> so they always fill the tile.
-            </p>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 reveal-fade" style="--delay:.12s">
-<figure class="group relative overflow-hidden rounded-xl bg-zinc-900 border border-zinc-800 p-4 aspect-[16/9] lg:p-6 lg:aspect-auto">
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-center">
-    
-    <div class="relative w-full aspect-video overflow-hidden rounded-t-xl group-hover:scale-105 transition-transform duration-500">
-      <img src="/art/work-01.svg" alt="Project 01" class="w-full h-full object-cover">
-    </div>
-    
-    <div class="text-left py-2 px-2 flex flex-col justify-between h-full">
-      <div>
-        <h3 class="text-xl font-bold text-white tracking-tight">NexusPIPE</h3>
-        <p class="text-zinc-400 text-sm mt-1">Security • DDoS Mitigation</p>
-        <p class="text-zinc-500 text-xs mt-3 lg:hidden">
-          {/* Mobilestats here */}
-          2.7 Billion+ Requests Mitigated
-        </p>
+    <section id="projects-bento" class="projects-section">
+      <div class="projects-container">
+        <p class="eyebrow reveal-fade">Portfolio</p>
+        <h2 class="section-headline reveal-slide-up">A few things worth seeing.</h2>
+
+        <div class="bento-grid reveal-fade" style="--delay:.15s">
+
+          <div class="bento-tile tile-large tile-fskpm">
+            <div class="tile-image-area">
+              <div class="tile-mockup">
+                <div class="phone-frame"><div class="phone-notch"></div><div class="phone-screen"></div></div>
+                <div class="phone-frame phone-back"><div class="phone-notch"></div><div class="phone-screen"></div></div>
+              </div>
+            </div>
+            <div class="tile-content">
+              <div class="tile-top-row">
+                <span class="tile-index">01</span>
+                <div class="tile-tags">
+                  <span class="tag">HCI</span> <span class="tag">UX Research</span>
+                </div>
+              </div>
+              <h3 class="tile-name">MyFSKPM App</h3>
+              <p class="tile-desc">Streamlined mobile app consolidating academic information for UNIMAS students — validated through full HCI iterative cycles.</p>
+              <div class="tile-footer">
+                <span class="tile-date">2025</span>
+                <span class="tile-btn">Details →</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bento-tile tile-stat tile-stat-purple">
+            <div class="stat-big">100%</div>
+            <div class="stat-title">Usability<br>success rate</div>
+            <div class="stat-sub">Validated via research</div>
+          </div>
+
+          <div class="bento-tile tile-badge">
+            <div class="badge-label">Specialisation</div>
+            <div class="badge-main">Human–<br>Computer<br>Interaction</div>
+          </div>
+
+          <div class="bento-tile tile-large tile-trombol">
+            <div class="tile-image-area">
+              <div class="tile-mockup">
+                <div class="phone-frame"><div class="phone-notch"></div><div class="phone-screen"></div></div>
+              </div>
+            </div>
+            <div class="tile-content">
+              <div class="tile-top-row">
+                <span class="tile-index">02</span>
+                <div class="tile-tags">
+                  <span class="tag tag-green">Flutter</span> <span class="tag tag-green">Gemini AI</span>
+                </div>
+              </div>
+              <h3 class="tile-name">Kampung Trombol</h3>
+              <p class="tile-desc">Cross-platform app for Paradise Beach featuring guest booking and a Gemini 2.0 Flash AI chatbot named "Drake".</p>
+              <div class="tile-footer">
+                <span class="tile-date">2025</span>
+                <a class="tile-btn tile-btn-green" href="#">View Figma →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bento-tile tile-stack">
+            <div class="stack-label">Tools & Stack</div>
+            <div class="stack-chips">
+              <span class="chip">Figma</span> <span class="chip">Flutter</span> <span class="chip">Python</span> <span class="chip">React</span> <span class="chip">Miro</span>
+            </div>
+          </div>
+
+          <div class="bento-tile tile-small tile-ixora">
+            <div class="small-image-area"><div class="web-mockup"></div></div>
+            <div class="small-content">
+              <h3 class="tile-name tile-name-sm">Ixora Homestay</h3>
+              <p class="tile-desc tile-desc-sm">Responsive landing page for a Miri-based homestay.</p>
+              <div class="tile-footer"><a class="tile-btn tile-btn-amber" href="#">Visit →</a></div>
+            </div>
+          </div>
+
+          <div class="bento-tile tile-small tile-kopitiam">
+            <div class="small-image-area"><div class="web-mockup"></div></div>
+            <div class="small-content">
+              <h3 class="tile-name tile-name-sm">Mami Kopitiam</h3>
+              <p class="tile-desc tile-desc-sm">Digital menu and brand presence for a modern café.</p>
+              <div class="tile-footer"><a class="tile-btn tile-btn-coral" href="#">Visit →</a></div>
+            </div>
+          </div>
+
+          <div class="bento-tile tile-small tile-inventory">
+            <div class="small-image-area"><div class="web-mockup"></div></div>
+            <div class="small-content">
+              <h3 class="tile-name tile-name-sm">Inventory System</h3>
+              <p class="tile-desc tile-desc-sm">Full-featured stock management dashboard for Kopitiam.</p>
+              <div class="tile-footer"><a class="tile-btn tile-btn-blue" href="#">Visit →</a></div>
+            </div>
+          </div>
+
+          <div class="bento-tile tile-small tile-coming">
+            <div class="coming-inner">
+              <div class="coming-icon">✦</div>
+              <div class="coming-label">Next project</div>
+            </div>
+          </div>
+
+        </div>
       </div>
-      
-      <div class="absolute bottom-4 left-4 text-[10px] font-black tracking-widest text-purple-600 lg:static lg:mt-4 lg:mb-1">
-        MARCH 2022
-      </div>
-    </div>
-    
-  </div>
-</figure>
+    </section>
     <!-- ===================== CONTACT ===================== -->
     <section class="contact" id="contact">
         <div class="container">
