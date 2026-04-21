@@ -823,11 +823,6 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 /* ── 12. Projects Bento ───────────────────────────────────── */
-.projects-section {
-  padding: var(--sp-xl) 0 var(--sp-2xl);
-  background: var(--c-bg);
-}
-
 .projects-container {
   /* Aligns with your existing site's width and adds side spacing */
   max-width: 1160px; 
