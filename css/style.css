@@ -823,123 +823,52 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 /* ── 12. Projects (Uniform 4-Grid) ────────────────────────── */
-.projects-section {
-  padding: var(--sp-xl) 0 var(--sp-2xl);
-  background: var(--c-bg);
-}
-
-.projects-container {
-  max-width: 1200px;
-  margin-inline: auto;
-  padding-inline: var(--sp-md);
-}
-
+/* --- 1. The Grid --- */
 .project-four-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* Forces 4 boxes in a row */
   gap: 1.5rem;
   margin-top: 3.5rem;
-  /* Prevent the grid itself from expanding */
-  align-items: start; 
 }
 
+/* --- 2. The Box (The Anchor) --- */
 .proj-box {
-  position: relative; /* Anchor for the overlay */
+  position: relative; 
   background: var(--c-surface);
   border: 1px solid var(--c-border);
   border-radius: var(--radius-xl);
-  overflow: hidden; /* This clips the big blue box inside the small box */
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1; /* Keeps them as small squares */
+  overflow: hidden;    /* CRITICAL: This hides the blue box until hover */
   transition: transform 0.4s var(--ease-out);
 }
 
-/* --- The Project Image --- */
-.proj-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s var(--ease-out);
-}
-
-.proj-box:hover img {
-  transform: scale(1.1);
-}
-
-/* --- The Hover Overlay (The "Popup") --- */
+/* --- 3. The Overlay (The Blue Slide) --- */
 .proj-hover-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(41, 151, 255, 0.95); /* Your blue */
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  
+  inset: 0;           /* Fills the square exactly */
+  background: var(--c-accent); /* Blue background */
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 1.5rem;
   
-  /* Start completely hidden below the box */
+  /* Start completely hidden below the square */
   opacity: 0;
   transform: translateY(100%); 
   transition: opacity 0.3s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-  
-  /* Ensure it doesn't block the cursor when hidden */
   pointer-events: none;
-  z-index: 10;
 }
 
-/* Reveal State - Only when hovering the specific box */
+/* --- 4. The Trigger --- */
 .proj-box:hover .proj-hover-overlay {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0); /* Slides up into the square */
   pointer-events: all;
 }
 
-/* --- Content Styling --- */
-.overlay-content {
-  color: #fff;
-  width: 100%;
-}
-
-.p-tag {
-  font-size: 0.6rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 4px 10px;
-  border-radius: 20px;
-  margin-bottom: 0.8rem;
-  display: inline-block;
-}
-
-.hover-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 0.4rem;
-}
-
-.hover-desc {
-  font-size: 0.8rem;
-  line-height: 1.4;
-  margin-bottom: 1.2rem;
-  opacity: 0.9;
-}
-
-.hover-btn {
-  display: inline-block;
-  background: #fff;
-  color: #000;
-  padding: 8px 18px;
-  border-radius: 30px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-decoration: none;
-}
+/* Cleanup: Remove any old proj-body styles that might be creating extra space */
+.proj-body { display: none; }
 
 /* Responsive: Stack boxes on mobile */
 @media (max-width: 900px) {
