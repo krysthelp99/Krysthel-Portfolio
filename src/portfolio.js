@@ -218,7 +218,7 @@ function bootApp() {
   });
 
   let scrollY = 0;
-  const dockSectionIds = ['home', 'about', 'skills', 'experience', 'projects', 'artworks', 'contact'];
+  const dockSectionIds = ['home', 'about', 'skills', 'experience', 'projects', 'sketchbook', 'contact'];
   const dockSections = dockSectionIds.map((id) => document.getElementById(id)).filter(Boolean);
   const dockItems = document.querySelectorAll('.dock-item[href^="#"]');
 
